@@ -42,7 +42,7 @@
     <h1 style="text-align: center;"> sign up! </h1>
     <div class="fo">
     <form class="needs-validation" novalidate>
-        <div class="form-row">
+        <div class="form-column">
           <div class="col-md-4 mb-3">
             <label for="validationCustom01">First name</label>
             <input type="text" class="form-control" id="validationCustom01"  required>
@@ -66,8 +66,27 @@
             </div>
           </div>
         </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-4">
+          <label for="exampleDropdownFormPassword1" >employee name</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="employer name" name='p2'>
+       </div> 
+      
+     <div class="col-md-3 mb-3">
+      <label for="validationCustom04">How employee is related</label>
+      <select class="custom-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>Father</option>
+          <option>Mother</option>
+          <option>Son</option>
+          <option>Daughter</option>
+        
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid relation
+      </div>
+    </div>
+        <div class="form-column">
+          <div class="col-md-3 mb-3">
             <label for="validationCustom03">City</label>
             <input type="text" class="form-control" id="validationCustom03" required>
             <div class="invalid-feedback">
@@ -93,14 +112,24 @@
               Please provide a valid zip.
             </div>
           </div>
-          <div class="form-group">
-            <label for="exampleDropdownFormPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" name='p1'>
+          <div class="col-md-4 mb-4">
+            <label for="exampleDropdownFormPassword1" >Aadhar number</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="aadhar" name='p2'>
+         </div> 
+         <div>
+          <label for="img">Select image of aadhaar:</label>
+          <input type="file" id="img" name="img" accept="image/*">
+         </div>
+     
+          <div class="col-md-3 mb-3">
+            <label for="exampleDropdownFormPassword1" >Password</label>
+            <input  type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" name='p1'>
           </div>
-          <div class="form-group">
-            <label for="exampleDropdownFormPassword1">confirm password</label>
+          <div class="col-md-3 mb-3">
+            <label for="exampleDropdownFormPassword1" >confirm password</label>
             <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="confirm Password" name='p2'>
          </div> 
+         
         </div>
         </div>
       
