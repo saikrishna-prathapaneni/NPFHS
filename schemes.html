@@ -1,13 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-</head>
-<body>
-  
-</body>
+    <head>
+        <title>National Health Schemes Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+          function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+    
+          function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+          }
+        </script>
+        <style>
+          .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(27, 39, 73);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+    
+          .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+    
+          .sidebar a:hover {
+            color: #f1f1f1;
+          }
+    
+          .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+    
+          .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgb(59, 55, 55);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+          }
+    
+          .openbtn:hover {
+            background-color: #444;
+          }
+    
+          #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+          }
+    
+          @media screen and (max-height: 450px) {
+            .sidebar {
+              padding-top: 15px;
+            }
+    
+            .sidebar a {
+              font-size: 18px;
+            }
+          }
+          #myInput {
+            background-image: url("/css/searchicon.png");
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+          }
+    
+          #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+    
+          #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+          }
+    
+          #myUL li a:hover:not(.header) {
+            background-color: #eee;
+          }
+        </style>
+      </head>
+        <body data-gr-c-s-loaded="true">
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="background-color: #e3f2fd;">
+              <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="./index.html" id="1"><b> NHSP</b></a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Health Schemes</a>
+                <a href="#">Health Programs</a>
+                <a href="#">Health policies</a>
+                <a href="#">Insurance schemes</a>
+                <a href="#">Emergency Helpline</a>
+                <a href="#">Governance/laws </a>
+                <a href="#">Telemedicine</a>
+                <a href="#">Contact</a>
+              </div>
+              <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>
+              </div>
+              <a class="navbar-brand" href="./index.html">NHSP</a>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Introduction</a>
+                  </li>
+        
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li style="padding-right: 20px;">
+                  <a href="create.html" style="color: azure;"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li style="padding-right: 10px;">
+                  <a href="login.html" style="color: azure;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="text-center p-5">
+              <h1>
+                Best schemes based on your profile
+              </h1>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for other schemes" title="Type in a name">
+              <div class="row">
+                <div class="col-5 text-center m-5">
+                  <ul id="myUL">
+                    <li class="list-group-item list-group-item-primary">
+                      <b>AAROGYASRI HEALTH SCHEME</b>
+                      <ul>
+                        <li>
+                          Apollo Hospitals Enterprises Ltd Jubilee Hills , APOL-JBL
+                        </li>
+                        <li>Kamineni Hospitals Pvt Ltd , KWDT-LBN</li>
+                        <li>
+                          Gandhi Hospitals , GGH-HYD
+                        </li>
+                        <li>
+                          Osmania General Hospital , OSM-HYD
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-success">
+                      <b>Scheme 2</b>
+                      <ul>
+                        <li>Kamineni Hospitals Pvt Ltd , KWDT-LBN</li>
+                        <li>
+                          Apollo Hospitals Enterprises Ltd Jubilee Hills , APOL-JBL
+                        </li>
+                        <li>
+                          Osmania General Hospital , OSM-HYD
+                        </li>
+                        <li>
+                          Gandhi Hospitals , GGH-HYD
+                        </li>
+                      </ul>
+                    </li>
+        
+                    <li class="list-group-item list-group-item-warning">
+                      <b>Scheme 3</b>
+                    </li>
+                    <!-- <li class="list-group-item list-group-item-info">
+                      <b>Scheme 4</b>
+        
+                    </li>
+        
+                    <li class="list-group-item list-group-item-dark">
+                      A simple dark list group item
+                    </li>
+                  </ul> -->
+                </ul></div>
+                <div class="col">
+                  <div id="demo" class="carousel slide text-center" data-interval="true">
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                      <li data-target="#demo" data-slide-to="3"></li>
+                      <li data-target="#demo" data-slide-to="4"></li>
+                      <li data-target="#demo" data-slide-to="5"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./car/1.jpeg" alt="Los Angeles" width="600" height="400">
+                        <div class="carousel-caption"></div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./car/2.jpeg" alt="Chicago" width="600" height="400">
+                        <div class="carousel-caption"></div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./car/3.jpeg" alt="New York" width="600" height="400">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./car/4.jpeg" alt="New York" width="600" height="400">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./car/5.jpeg" alt="New York" width="600" height="400">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        
+        </body>     
 </html>
